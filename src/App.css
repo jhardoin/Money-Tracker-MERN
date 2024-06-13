@@ -1,38 +1,143 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17181F;
+  color: #ddd;
+  font-family: Arial, sans-serif; /* Optional: Change the font family */
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1200px; /* Adjust max-width to your preference */
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
   text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 3rem; /* Adjust heading font size */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span {
+  font-size: 1.5rem;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input {
+  width: 100%;
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid #30313d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+}
+
+form input[type='date'] {
+  color: #777;
+  width: 50%;
+}
+
+form div.basic {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap; /* Ensure flexibility for smaller screens */
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+  width: 100%;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+div.transactions {
+  margin-top: 20px;
+}
+
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #30313d;
+}
+
+div.transaction:first-child {
+  border-top: 0;
+}
+
+div.transaction div.name {
+  font-size: 1.5rem;
+}
+
+div.transaction div.description {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+div.right {
+  text-align: right;
+}
+
+div.price.green {
+  color: #1c1;
+}
+
+div.price.red {
+  color: #c11;
+}
+
+div.transaction div.datetime {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  main {
+    padding: 0 15px; /* Adjust padding for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1 span {
+    font-size: 1rem;
+  }
+
+  form input[type='date'] {
+    width: 100%; /* Full width for date input on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  div.transaction div.name {
+    font-size: 1.2rem; /* Adjust font size for transaction names */
+  }
+
+  div.transaction div.description {
+    font-size: 0.8rem; /* Adjust font size for transaction descriptions */
+  }
+
+  div.transaction div.datetime {
+    font-size: 0.8rem; /* Adjust font size for transaction date */
   }
 }
