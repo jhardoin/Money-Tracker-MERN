@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const app = express();
-const port = 4040;
+const port = process.env.PORT || 4040;
 const Transaction = require('./models/Transaction.js');
 const mongoose = require('mongoose');
 
