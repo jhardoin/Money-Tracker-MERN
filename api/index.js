@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const app = express();
-const port = process.env.PORT || 4040;
+const port = 4040;
 const Transaction = require('./models/Transaction.js');
 const mongoose = require('mongoose');
 
@@ -61,7 +61,3 @@ app.get('/api/transactions', async (request, response) =>{
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-//moneytracker
-//mongodb+srv://moneytracker:rKUV7lCC5SjKbFBD@cluster0.tnz4vwu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-//rKUV7lCC5SjKbFBD
