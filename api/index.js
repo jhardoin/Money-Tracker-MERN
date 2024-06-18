@@ -6,7 +6,7 @@ const Transaction = require('./models/Transaction.js');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 4040;
+const port = process.env.PORT || 6169;
 
 // Middleware
 app.use(cors());
