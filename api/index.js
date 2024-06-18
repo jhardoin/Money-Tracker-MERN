@@ -1,11 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config(); // Load environment variables from .env file
 const mongoose = require('mongoose');
 const Transaction = require('./models/Transaction.js');
 
+require('dotenv').config();
+
 const app = express();
-const port = process.env.PORT || 4040; // Use the port from environment variables or default to 4040
+const port = process.env.PORT || 4040;
 
 // Middleware
 app.use(cors());
@@ -29,14 +30,12 @@ app.get('/api/test', (req, res) => {
 app.post('/api/transaction', async (req, res) => {
   try {
     const { price, name, description, datetime } = req.body;
-    console.log('Request body:', req.body);
 
-    // Ensure all required fields are present
+    // Validate input fields
     if (!price || !name || !description || !datetime) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
-    // Create a new transaction
     const transaction = new Transaction({
       price,
       name,
@@ -44,7 +43,6 @@ app.post('/api/transaction', async (req, res) => {
       datetime
     });
 
-    // Save the transaction to the database
     const savedTransaction = await transaction.save();
     res.json(savedTransaction);
   } catch (error) {
