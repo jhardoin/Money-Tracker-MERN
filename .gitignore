@@ -23,3 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 node_modules
+<<<<<<< HEAD
+=======
+./api/models/.env
+>>>>>>> 894d1be845a4d78f2adf7ee7e1f8421adf52755a
