@@ -4,3 +4,4 @@ node_modules/
 *.sqlite
 *.tmp
 .idea/
+package-lock.json
