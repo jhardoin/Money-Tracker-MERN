@@ -1,3 +1,7 @@
+Description:
+
+MongoDB, Express, React, Node, JavaScript, CSS
+
 This project is a money tracker application designed to help users manage their finances effectively. The app provides a user-friendly interface for tracking financial transactions, allowing users to:
 
  Input Expenses: Users can record various expenses, categorizing them to keep track of spending in different areas.
